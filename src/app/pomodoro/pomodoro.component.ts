@@ -5,12 +5,13 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   templateUrl: './pomodoro.component.html',
   styleUrls: ['./pomodoro.component.css']
 })
-export class PomodoroComponent implements OnInit {
-  minutes = 0;
-  seconds = 4;
+export class PomodoroComponent {
+  minutes = 25;
+  seconds = 0;
   isRunning = false;
   rest = false;
   counter = 0;
+  paused = false;
 
   @ViewChild('pomodoroSound') pomodoroSound!: ElementRef;
   @ViewChild('restSound') restSound!: ElementRef;
@@ -18,14 +19,10 @@ export class PomodoroComponent implements OnInit {
   private interval: any;
 
   get restMessage() {
-
     return this.counter < 4 ? 'Take a short break' : 'Take a long break';
   }
 
-  ngOnInit() {}
-
-  ngAfterView() {
-    debugger;
+ ngAfterView() {
     this.pomodoroSound.nativeElement.play();
     this.restSound.nativeElement.play();
   }
@@ -47,14 +44,29 @@ export class PomodoroComponent implements OnInit {
     this.counter = 0;
   }
 
+  pause() {
+    clearInterval(this.interval);
+    this.paused = true;
+  }
+
+  resume() {
+    if (this.paused) {
+      this.interval = setInterval(() => {
+        this.tick();
+      }, 1000);
+      this.paused = false;
+    }
+  }
+
   private tick() {
+    const audio = document.getElementById('pomodoro-sound') as HTMLAudioElement;
     if (this.seconds > 0) {
       this.seconds--;
     } else if (this.minutes > 0) {
       this.minutes--;
       this.seconds = 59;
     } else if (!this.rest) {
-      this.rest = true;
+      audio.play();
       this.minutes = 5;
       this.seconds = 0;
       this.counter++;
