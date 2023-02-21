@@ -1,0 +1,30 @@
+<mat-toolbar color="accent">
+    <button mat-icon-button matTooltip="Application Menu" (click)="sidenav.toggle()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    Lost-lofi
+    <span style="flex: 1 1 auto;"></span>
+  </mat-toolbar>
+
+
+<mat-sidenav-container style="height: calc(100% - 64px); margin: 0;">
+    <mat-sidenav #sidenav mode="side" [class.mat-elevation-z4]="true" style="width: 240px">
+      <mat-nav-list dense>
+        <mat-list-item (click)="togglePomodoro()"><i class="fas fa-stopwatch"></i> Pomodoro</mat-list-item>
+        <mat-list-item (click)="toggleWeather()"><i class="fa-solid fa-cloud"></i> Weather</mat-list-item>
+        <mat-list-item (click)="toggleTodoList()"><i class="fas fa-tasks"></i> To-do list</mat-list-item>
+
+        <mat-list-item (click)="openDialog()"><i class="fa-solid fa-image"></i> Change background</mat-list-item>
+        <mat-list-item (click)="startRain()"><i class="fa-solid fa-cloud-rain"></i> Rainy Sound</mat-list-item>
+        <div id="volumen-control">
+          <audio id="rainy-sound" loop>
+            <source src="../assets/sounds/rain.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <app-volumen-control></app-volumen-control>
+        </div>
+        <mat-list-item (click)="toggleFullscreen()"><i class="fa-solid fa-expand"></i> Fullscreen</mat-list-item>
+
+      </mat-nav-list>
+    </mat-sidenav>
+  </mat-sidenav-container>
