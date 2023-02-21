@@ -1,0 +1,46 @@
+<div id="player-container">
+  <div id="player-buttons">
+    <div class="button-container">
+      <button mat-icon-button (click)="showYoutubeContainer = true; showSpotifyContainer = false">
+        <i class="fab fa-youtube"></i>
+      </button>
+      <button mat-icon-button (click)="showSpotifyContainer = true; showYoutubeContainer = false">
+        <i class="fab fa-spotify"></i>
+      </button>
+    </div>
+
+    <div *ngIf="showYoutubeContainer">
+      <div class="icon-container">
+        <i class="fa-brands fa-youtube" (click)="getYoutubeUrl('jfKfPfyJRdk')"></i>
+        <i class="fa-brands fa-youtube" (click)="getYoutubeUrl('Ha2UW8a0Vzc')"></i>
+        <i class="fa-brands fa-youtube" (click)="getYoutubeUrl('MuctFLYwz48')"></i>
+      </div>
+    </div>
+
+    <div *ngIf="showSpotifyContainer">
+      <div class="icon-container">
+        <i class="fab fa-spotify" (click)="getSpotifyUrl('37i9dQZF1DWWQRwui0ExPn')"></i>
+        <i class="fab fa-spotify" (click)="getSpotifyUrl('0vvXsWCC9xrXsKd4FyS8kM')"></i>
+        <i class="fab fa-spotify" (click)="getSpotifyUrl('37i9dQZF1DX9RwfGbeGQwP')"></i>
+      </div>
+    </div>
+
+  </div>
+  <div *ngIf="showYoutubeContainer">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <div id="youtube-container">
+      <iframe id="youtubePlayer" width="360" height="200" src="https://www.youtube.com/embed/jfKfPfyJRdk"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div *ngIf="showSpotifyContainer">
+    <div id="spotify-container">
+      <iframe id="spotifyPlayer" style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator" width="100%"
+        height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>

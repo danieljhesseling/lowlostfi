@@ -21,6 +21,8 @@ import { WeatherComponent } from './weather/weather.component';
 import { PopupComponent } from './popup/popup.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { RandomSentenceComponent } from './random-sentence/random-sentence.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PlayerContainerComponent } from './player-container/player-container.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { RandomSentenceComponent } from './random-sentence/random-sentence.compo
     WeatherComponent,
     PopupComponent,
     DialogComponent,
-    RandomSentenceComponent
+    RandomSentenceComponent,
+    NavbarComponent,
+    PlayerContainerComponent
   ],
   imports: [
     BrowserModule,

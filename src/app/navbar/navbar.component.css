@@ -1,0 +1,25 @@
+/* Position the toolbar at the top of the page */
+mat-toolbar[color="accent"] {
+    background-color: var(--accent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  /* Position the sidenav on the left */
+  mat-sidenav {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: fixed;
+    top: 64px; /* adjust this value to match your toolbar height */
+    left: 0;
+    /*bottom: 16em;*/
+    height: 50%;
+  }
+  
+  #volumen-control {
+    width: 80%;
+    padding-left: 1em;
+  }
