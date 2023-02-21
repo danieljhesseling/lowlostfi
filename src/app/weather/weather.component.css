@@ -1,0 +1,19 @@
+/* Position the weather container in the top right */
+#weather-container {
+  position: absolute;
+  font-size: 1.2em;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  border-radius: 0.3em;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.fa-sun {
+  color: orange;
+}
+
+.fa-cloud-sun {
+  color: grey;
+}

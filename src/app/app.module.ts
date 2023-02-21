@@ -1,18 +1,53 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { MusicLandingComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { TodolistComponent } from './todolist/todolist.component';
+import { VolumenControlComponent } from './volumen-control/volumen-control.component';
+import { PomodoroComponent } from './pomodoro/pomodoro.component';
+import { WeatherComponent } from './weather/weather.component';
+import { PopupComponent } from './popup/popup.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    MusicLandingComponent,
+    TodolistComponent,
+    VolumenControlComponent,
+    PomodoroComponent,
+    WeatherComponent,
+    PopupComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatDividerModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatExpansionModule,
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [MusicLandingComponent]
 })
 export class AppModule { }

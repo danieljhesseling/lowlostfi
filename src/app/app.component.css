@@ -1,0 +1,51 @@
+/* Set body and html to 100vh */
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
+/* Position the toolbar at the top of the page */
+mat-toolbar[color="accent"] {
+  background-color: var(--accent);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* Position the sidenav on the left */
+mat-sidenav {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  top: 64px; /* adjust this value to match your toolbar height */
+  left: 0;
+  /*bottom: 16em;*/
+  height: 75%;
+}
+
+/* Position the content container */
+#content-container {
+  position: absolute;
+  top: 64px; /* adjust this value to match your toolbar height */
+  left: 240px; /* adjust this value to match your sidenav width */
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Position the player container in the right bottom */
+#player-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#volumen-control {
+  width: 80%;
+  padding-left: 1em;
+}
