@@ -11,10 +11,6 @@ import { DialogComponent } from './dialog/dialog.component';
   styleUrls: ['./app.component.css']
 })
 export class MusicLandingComponent implements OnInit {
-  timeLeft: number = 1500; // 25 minutes in seconds
-  isRunning: boolean = false;
-  interval: any;
-  pomodoroTime: string = '25:00';
   elem: any;
   youtubeId: string = 'jfKfPfyJRdk';
 

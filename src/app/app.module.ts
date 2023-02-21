@@ -20,6 +20,7 @@ import { PomodoroComponent } from './pomodoro/pomodoro.component';
 import { WeatherComponent } from './weather/weather.component';
 import { PopupComponent } from './popup/popup.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { RandomSentenceComponent } from './random-sentence/random-sentence.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DialogComponent } from './dialog/dialog.component';
     PomodoroComponent,
     WeatherComponent,
     PopupComponent,
-    DialogComponent
+    DialogComponent,
+    RandomSentenceComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,8 @@
     <div class="actions">
       <button (click)="start()" mat-raised-button color="primary" [disabled]="isRunning">Start</button>
       <button (click)="reset()" mat-raised-button color="warn" [disabled]="!isRunning">Reset</button>
+      <button (click)="pause()" mat-raised-button color="warn" [disabled]="!isRunning">Pause</button>
+      <button (click)="resume()" mat-raised-button color="warn" [disabled]="!isRunning">Resume</button>
     </div>
     <div class="rest" *ngIf="rest">
       <div class="counter">{{ counter }}</div>

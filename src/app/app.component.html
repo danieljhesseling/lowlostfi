@@ -21,7 +21,6 @@
               </mat-expansion-panel-header>
               <mat-list-item (click)="getYoutubeUrl('jfKfPfyJRdk')"><i class="fa-brands fa-youtube"></i> Hip hop</mat-list-item>
               <mat-list-item (click)="getYoutubeUrl('Ha2UW8a0Vzc')"><i class="fa-brands fa-youtube"></i> Jazz</mat-list-item>
-              <mat-list-item (click)="getYoutubeUrl('Ha2UW8a0Vzc')"><i class="fa-brands fa-youtube"></i> Jazz</mat-list-item>
               <mat-list-item (click)="getYoutubeUrl('MuctFLYwz48')"><i class="fa-brands fa-youtube"></i> Cozzy Cabin</mat-list-item>
             </mat-expansion-panel>
 
@@ -53,6 +52,8 @@
 
 
   <div id="content-container">
+
+    <app-random-sentence></app-random-sentence>
 
     <div id="player-container">
       <div *ngIf="showYoutubeContainer">
