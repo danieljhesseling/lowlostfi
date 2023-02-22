@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, Inject, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { BackgroundService } from '../../app/background.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -12,8 +12,6 @@ import { DialogComponent } from '../dialog/dialog.component';
 export class NavbarComponent {
   elem: any;
   isAudioPlaying: boolean = false;
-
-  @ViewChild('youtubePlayer') youtubePlayer: any;
 
   constructor(
     public dialog: MatDialog,
@@ -81,6 +79,16 @@ export class NavbarComponent {
         this.document.msExitFullscreen();
       }
       this.isFullscreen = false;
+    }
+  }
+
+  onSidenavToggle() {
+    // When sidenav is opened
+    const matsidenav = document.getElementById('sidenav') as HTMLDivElement;
+    if(this.showNavbar === true) {
+      matsidenav.classList.add('open');
+    } else {
+      matsidenav.classList.add('hide');
     }
   }
 

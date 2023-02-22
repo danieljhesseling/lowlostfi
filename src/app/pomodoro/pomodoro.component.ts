@@ -22,11 +22,6 @@ export class PomodoroComponent {
     return this.counter < 4 ? 'Take a short break' : 'Take a long break';
   }
 
- ngAfterView() {
-    this.pomodoroSound.nativeElement.play();
-    this.restSound.nativeElement.play();
-  }
-
   start() {
     this.isRunning = true;
 
