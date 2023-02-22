@@ -7,13 +7,14 @@ import { Component } from '@angular/core';
 })
 export class RandomSentenceComponent {
   sentences: string[] = [
-    'The quick brown fox jumps over the lazy dog.',
-    'She sells seashells by the seashore.',
-    'All work and no play makes Jack a dull boy.',
-    'The rain in Spain stays mainly in the plain.',
-    'I scream, you scream, we all scream for ice cream.'
-  ];
+    "Success is not final; failure is not fatal: It is the courage to continue that counts. — Winston S. Churchill",
+    "It is better to fail in originality than to succeed in imitation. — Herman Melville",
+    "The road to success and the road to failure are almost exactly the same. — Colin R. Davis",
+    "Success usually comes to those who are too busy looking for it. — Henry David Thoreau",
+    "Develop success from failures. Discouragement and failure are two of the surest stepping stones to success. — Dale Carnegie"
+      ];
   sentence: string = '';
+  author: string = '';
 
   constructor() {
     this.generateSentence();
@@ -21,6 +22,8 @@ export class RandomSentenceComponent {
 
   generateSentence() {
     const randomIndex = Math.floor(Math.random() * this.sentences.length);
-    this.sentence = this.sentences[randomIndex];
+    const parts = this.sentences[randomIndex].split(' — ');
+    this.sentence = parts[0];
+    this.author = parts[1];
   }
 }
