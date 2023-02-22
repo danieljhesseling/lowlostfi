@@ -1,14 +1,24 @@
 #random-sentence {
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
     background-color: rgba(255, 255, 255, 0.6);
     text-align: center;
     font-size: 1em;
     margin: 1em;
-    padding: 0.5em;
+    padding: 0.8em;
     padding-bottom: 0;
     flex-direction: column;
     border-radius: 0.4em;
     justify-content: center;
     align-items: center;
+}
+
+#random-sentence button {
+    margin-right: 1em;
+    margin-bottom: 1em;
+    height: .9em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
