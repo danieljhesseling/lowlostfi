@@ -16,9 +16,8 @@ mat-toolbar[color="accent"] {
   position: fixed;
   top: 64px;
   /* adjust this value to match your toolbar height */
-  left: 0;
-  /*bottom: 16em;*/
-  height: 50%;
+  left: 1em;
+  height: 22%;
 }
 
 /* Transition the sidenav when it is shown or hidden */
@@ -28,9 +27,4 @@ mat-toolbar[color="accent"] {
 
 #sidenav.hide {
   transform: translateX(-100%);
-}
-
-#volumen-control {
-  width: 80%;
-  padding-left: 1em;
 }

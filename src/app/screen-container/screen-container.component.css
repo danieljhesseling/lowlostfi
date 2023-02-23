@@ -1,11 +1,11 @@
-/* Position the player container in the right bottom */
-#player-container {
+/* Position the screen container in the left bottom */
+#screen-component {
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
 }
 
-#player-buttons {
+#screen-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,29 +19,26 @@
     border-radius: 0.4em;
 }
 
-.button-container {
+#screen-icon-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.icon-container {
+#screen-icon-container i {
+    font-size: 1.5em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#volumen-control {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 1em;
-}
-
-
-.icon {
-    padding-right: .1em;
-}
-
-
-#foot {
-    background-color: #f0f0f0;
-    padding: 16px;
-    border-radius: 8px;
+    width: 80%;
+    padding-left: 1em;
 }

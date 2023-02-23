@@ -23,6 +23,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { RandomSentenceComponent } from './random-sentence/random-sentence.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlayerContainerComponent } from './player-container/player-container.component';
+import { ScreenContainerComponent } from './screen-container/screen-container.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PlayerContainerComponent } from './player-container/player-container.co
     DialogComponent,
     RandomSentenceComponent,
     NavbarComponent,
-    PlayerContainerComponent
+    PlayerContainerComponent,
+    ScreenContainerComponent
   ],
   imports: [
     BrowserModule,
