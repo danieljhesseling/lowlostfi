@@ -12,7 +12,6 @@ import { DialogComponent } from '../dialog/dialog.component';
 export class ScreenContainerComponent {
 
   elem: any;
-  isAudioPlaying: boolean = false;
   isFullscreen: boolean = false;
 
   constructor(
@@ -66,16 +65,4 @@ export class ScreenContainerComponent {
       }
     });
   };
-
-  startRain() {
-    debugger;
-    const audio = document.getElementById('rainy-sound') as HTMLAudioElement;
-    if (this.isAudioPlaying) {
-      audio.pause();
-      this.isAudioPlaying = false;
-    } else {
-      audio.play();
-      this.isAudioPlaying = true;
-    }
-  }
 }
