@@ -24,6 +24,7 @@ import { RandomSentenceComponent } from './random-sentence/random-sentence.compo
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlayerContainerComponent } from './player-container/player-container.component';
 import { ScreenContainerComponent } from './screen-container/screen-container.component';
+import { MusicComponentComponent } from './music-component/music-component.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ScreenContainerComponent } from './screen-container/screen-container.co
     RandomSentenceComponent,
     NavbarComponent,
     PlayerContainerComponent,
-    ScreenContainerComponent
+    ScreenContainerComponent,
+    MusicComponentComponent
   ],
   imports: [
     BrowserModule,

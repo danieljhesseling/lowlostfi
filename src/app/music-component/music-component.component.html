@@ -1,0 +1,16 @@
+<div id="music-component">
+    <div id="music-container">
+      <div id="music-icon-container">
+        <i (click)="lastSong()" class="fa-solid fa-backward"></i>
+        <i (click)="startMusic()" class="fa-solid" [ngClass]="{'fa-play': !isAudioPlaying, 'fa-pause': isAudioPlaying}"></i>
+        <i (click)="nextSong()" class="fa-solid fa-forward"></i>
+      </div>
+      <div id="volumen-control">
+        <audio id="sound" loop>
+          <source id="song" [src]="audioSource[number].link" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <app-volumen-control></app-volumen-control>
+      </div>
+    </div>
+  </div>
